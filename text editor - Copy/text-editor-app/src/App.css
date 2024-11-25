@@ -1,0 +1,148 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url(./desktop-wallpaper-text-background-text.jpg);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.app {
+  width: 90%;
+  max-width: 900px;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Editor Area Styling */
+.editor {
+  width: 100%;
+  min-height: 200px;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  outline: none;
+  resize: none;
+  background-color: #fafafa;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.editor:empty::before {
+  content: "Start typing here...";
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Controls Section Styling */
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* Formatting Buttons */
+.formatting-buttons button,
+.case-conversion-buttons button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  margin: 5px;
+}
+
+.formatting-buttons button:hover,
+.case-conversion-buttons button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Case Conversion Buttons */
+.case-conversion-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.stat-item {
+  background-color: #ecf0f1;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+}
+
+.stat-item strong {
+  font-size: 1.2rem;
+}
+
+.stat-item span {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.5rem;
+  color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .case-conversion-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
